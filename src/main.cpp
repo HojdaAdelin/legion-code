@@ -22,6 +22,11 @@ int main() {
             std::string directory = command.substr(3);
             directoryManager(directory);
 
+        } else if (command == "help" || ".git" || ".source" || ".bug") {
+
+            std::string Service = command;
+            help(Service);
+
         } else {
 
             std::cout << "Wrong command" << std::endl;

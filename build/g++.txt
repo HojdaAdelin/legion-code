@@ -1,1 +1,1 @@
-g++ -o LegionCode.exe src/main.cpp src/Manager/DirectoryString.cpp
+g++ -o LegionCode.exe src/main.cpp src/Manager/DirectoryString.cpp src/Service/CommandsHelper.cpp src/Service/Web.cpp
