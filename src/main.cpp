@@ -11,6 +11,8 @@ int main() {
 
     std::string command;
     while (true) {
+
+        std::cout << "Current directory: ";
         std::cout << std::filesystem::current_path() << std::endl;
 
         // Color <<<
@@ -18,7 +20,7 @@ int main() {
         SetConsoleTextAttribute(hConsole, 12);
         std::cout << ">>> ";
         SetConsoleTextAttribute(hConsole, 15);
-        
+
         std::getline(std::cin, command);
         
         if (command == "exit") {
@@ -34,6 +36,10 @@ int main() {
 
             std::string Service = command;
             help(Service);
+
+        } else if (command == "cls") {
+
+            system("cls");
 
         } else {
 

@@ -19,5 +19,7 @@ void commandHelp() {
     std::cout << ".source       Open LegionCode source\n";
     std::cout << ".bug          Open bugs website\n";
     std::cout << "cd            Directory change\n";
-
+    std::cout << "cls           Clear terminal\n";
+    std::cout << "\n";
+    
 }
