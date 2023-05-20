@@ -12,7 +12,11 @@ int main() {
     std::string command;
     while (true) {
 
-        std::cout << "Current directory: ";
+        HANDLE Legion = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(Legion, 2);
+        std::cout << "$LegionCode ";
+        SetConsoleTextAttribute(Legion, 15);
+
         std::cout << std::filesystem::current_path() << std::endl;
 
         // Color <<<
@@ -32,14 +36,15 @@ int main() {
             std::string directory = command.substr(3);
             directoryManager(directory);
 
-        } else if (command == "help" || ".git" || ".source" || ".bug") {
-
-            std::string Service = command;
-            help(Service);
-
         } else if (command == "cls") {
 
             system("cls");
+            main();
+
+        } else if (command == "help" || ".git" || ".source" || ".bug" || "version" || "log") {
+
+            std::string Service = command;
+            help(Service);
 
         } else {
 
