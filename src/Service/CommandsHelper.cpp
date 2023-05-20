@@ -27,6 +27,7 @@ void commandHelp() {
     std::cout << "cls           Clear terminal\n";
     std::cout << "version       Display current version\n";
     std::cout << "log           Change log\n";
+    std::cout << "del dir       Delete current directory\n";
     std::cout << "\n";
     
 }

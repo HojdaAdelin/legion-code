@@ -36,19 +36,43 @@ int main() {
             std::string directory = command.substr(3);
             directoryManager(directory);
 
+        } else if (command == "del dir") {
+
+            deleteDirectory();
+            
         } else if (command == "cls") {
 
             system("cls");
             main();
 
-        } else if (command == "help" || ".git" || ".source" || ".bug" || "version" || "log") {
+        } else if (command == "help") {
 
             std::string Service = command;
             help(Service);
 
+        } else if (command == ".git") {
+
+            std::string Service = command;
+            help(Service);
+        } else if (command == ".source") {
+
+            std::string Service = command;
+            help(Service);
+        } else if (command == ".bug") {
+
+            std::string Service = command;
+            help(Service);
+        } else if (command == "version") {
+
+            std::string Service = command;
+            help(Service);
+        } else if (command == "log") {
+
+            std::string Service = command;
+            help(Service);
         } else {
 
-            std::cout << "Wrong command" << std::endl;
+            std::cout << "Wrong command\n\n";
 
         }
     }

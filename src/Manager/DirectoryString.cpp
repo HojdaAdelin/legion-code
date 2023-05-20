@@ -14,3 +14,4 @@ void directoryManager(const std::string& directory) {
         std::cerr << "Could not change directory" << std::endl;
     }
 }
+
