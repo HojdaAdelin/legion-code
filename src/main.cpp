@@ -35,6 +35,10 @@ int main() {
             std::string filename = command.substr(8);
             displayFileSize(filename);
 
+        } else if (command.substr(0, 7) == "info -f") {
+            std::string filename = command.substr(8);
+            displayFileDetails(filename);
+
         } else if (command.substr(0, 3) == "cd ") {
 
             std::string directory = command.substr(3);

@@ -29,6 +29,7 @@ void commandHelp() {
     std::cout << "log               Change log\n";
     std::cout << "del dir           Delete current directory\n";
     std::cout << "size -f 'file'    Display file size from a directory\n";
+    std::cout << "info -f 'file'    Didplay file details from a directory\n";
     std::cout << "\n";
     
 }

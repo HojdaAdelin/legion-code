@@ -9,3 +9,4 @@ void directoryManager(const std::string& directory);
 void deleteDirectory();
 void help(std::string ServiceString);
 void displayFileSize(const std::string& filename);
+void displayFileDetails(const std::string& filename);
