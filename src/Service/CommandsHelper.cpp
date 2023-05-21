@@ -7,9 +7,9 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.0 BETA\n\n";
+        std::cout << "\nVersion: 1.0 BETA\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Main deployment\n\n";
+        std::cout << "\n-Main deployment\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -18,7 +18,6 @@ void help(std::string ServiceString) {
 
 void commandHelp() {
 
-    std::cout << "\n";
     std::cout << "help              Display commands\n";
     std::cout << ".git              Open github\n";
     std::cout << ".source           Open LegionCode source\n";
@@ -29,7 +28,8 @@ void commandHelp() {
     std::cout << "log               Change log\n";
     std::cout << "del dir           Delete current directory\n";
     std::cout << "size -f 'file'    Display file size from a directory\n";
-    std::cout << "info -f 'file'    Didplay file details from a directory\n";
-    std::cout << "\n";
+    std::cout << "info -f 'file'    Display file details from a directory\n";
+    std::cout << "del -f 'file'     Delete file from a directory\n";
+
     
 }

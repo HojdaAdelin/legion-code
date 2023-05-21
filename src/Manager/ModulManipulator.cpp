@@ -14,6 +14,6 @@ void deleteDirectory() {
     if (ec) {
         std::cerr << "Failed to delete directory: " << ec.message() << std::endl;
     } else {
-        std::cout << "Directory deleted!\n\n";
+        std::cout << "Directory deleted!";
     }
 }

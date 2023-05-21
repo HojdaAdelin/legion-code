@@ -32,21 +32,33 @@ int main() {
             system("exit");
 
         } else if (command.substr(0, 7) == "size -f") {
+            std::cout << "\n";
             std::string filename = command.substr(8);
             displayFileSize(filename);
+            std::cout << "\n";
 
         } else if (command.substr(0, 7) == "info -f") {
+            std::cout << "\n";
             std::string filename = command.substr(8);
             displayFileDetails(filename);
+            std::cout << "\n";
 
+        } else if (command.substr(0, 6) == "del -f") {
+            std::cout << "\n";
+            std::string filename = command.substr(7);
+            deleteFile(filename);
+            std::cout << "\n";
+            
         } else if (command.substr(0, 3) == "cd ") {
-
+            std::cout << "\n";
             std::string directory = command.substr(3);
             directoryManager(directory);
+            std::cout << "\n";
 
         } else if (command == "del dir") {
-
+            std::cout << "\n";
             deleteDirectory();
+            std::cout << "\n";
             
         } else if (command == "cls") {
 
@@ -54,33 +66,43 @@ int main() {
             main();
 
         } else if (command == "help") {
-
+            std::cout << "\n";
             std::string Service = command;
             help(Service);
+            std::cout << "\n";
 
         } else if (command == ".git") {
-
             std::string Service = command;
             help(Service);
+            std::cout << "\n";
+
         } else if (command == ".source") {
 
             std::string Service = command;
             help(Service);
+            std::cout << "\n";
+
         } else if (command == ".bug") {
 
             std::string Service = command;
             help(Service);
+            std::cout << "\n";
+
         } else if (command == "version") {
 
             std::string Service = command;
             help(Service);
+            std::cout << "\n";
+
         } else if (command == "log") {
 
             std::string Service = command;
             help(Service);
+            std::cout << "\n";
+
         } else {
 
-            std::cout << "Wrong command\n\n";
+            std::cout << "\nWrong command\n\n";
 
         }
     }

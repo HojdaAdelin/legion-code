@@ -47,3 +47,15 @@ void displayFileDetails(const std::string& filename) {
         std::cerr << "File does not exist or is not a regular file." << std::endl;
     }
 }
+
+
+void deleteFile(const std::string& filename) {
+    std::filesystem::path filePath(filename);
+    
+    if (std::filesystem::exists(filePath) && std::filesystem::is_regular_file(filePath)) {
+        std::filesystem::remove(filePath);
+        std::cout << "File '" << filename << "' deleted successfully." << std::endl;
+    } else {
+        std::cerr << "File does not exist or is not a regular file." << std::endl;
+    }
+}
