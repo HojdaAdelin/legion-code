@@ -3,4 +3,5 @@ src/main.cpp,
 src/Manager/DirectoryString.cpp,
 src/Service/CommandsHelper.cpp, 
 src/Service/Web.cpp,
-src/Manager/ModulManipulator.cpp
+src/Manager/ModulManipulator.cpp,
+src/Manager/FileManipulator.cpp
