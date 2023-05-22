@@ -123,7 +123,10 @@ int main() {
             std::cout << "\n";
         } else {
 
-            std::cout << "\nWrong command\n\n";
+            HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+            SetConsoleTextAttribute(errorWin, 12);
+            std::cout << "\nError: Wrong command\n\n";
+            SetConsoleTextAttribute(errorWin, 15);
 
         }
     }

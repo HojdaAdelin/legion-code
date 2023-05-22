@@ -16,7 +16,11 @@ void displayFileSize(const std::string& filename) {
         SetConsoleTextAttribute(fileColor, 15);
 
     } else {
-        std::cerr << "File does not exist or is not a regular file." << std::endl;
+        HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorWin, 12);
+        std::cerr << "Error: File does not exist or is not a regular file." << std::endl;
+        SetConsoleTextAttribute(errorWin, 15);
+
     }
 }
 
@@ -43,8 +47,13 @@ void displayFileDetails(const std::string& filename) {
             << ((permissions & std::filesystem::perms::others_write) != std::filesystem::perms::none ? "w" : "-")
             << ((permissions & std::filesystem::perms::others_exec) != std::filesystem::perms::none ? "x" : "-")
             << std::endl;
+
     } else {
-        std::cerr << "File does not exist or is not a regular file." << std::endl;
+
+        HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorWin, 12);
+        std::cerr << "Error: File does not exist or is not a regular file." << std::endl;
+        SetConsoleTextAttribute(errorWin, 15);
     }
 }
 
@@ -54,9 +63,18 @@ void deleteFile(const std::string& filename) {
     
     if (std::filesystem::exists(filePath) && std::filesystem::is_regular_file(filePath)) {
         std::filesystem::remove(filePath);
-        std::cout << "File '" << filename << "' deleted successfully." << std::endl;
+        std::cout << "File '" << filename << "' deleted";
+
+        HANDLE winColor = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(winColor, 2);
+        std::cout << " successfully." << std::endl;
+        SetConsoleTextAttribute(winColor, 15);
+
     } else {
-        std::cerr << "File does not exist or is not a regular file." << std::endl;
+        HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorWin, 12);
+        std::cerr << "Error: File does not exist or is not a regular file." << std::endl;
+        SetConsoleTextAttribute(errorWin, 15);
     }
 }
 
@@ -66,8 +84,17 @@ void renameFile(const std::string& filename, const std::string& newname) {
     
     if (std::filesystem::exists(filePath) && std::filesystem::is_regular_file(filePath)) {
         std::filesystem::rename(filePath, newFilePath);
-        std::cout << "File '" << filename << "' renamed to '" << newname << "' successfully." << std::endl;
+        std::cout << "File '" << filename << "' renamed to '" << newname;
+
+        HANDLE winColor = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(winColor, 2);
+        std::cout << " successfully." << std::endl;
+        SetConsoleTextAttribute(winColor, 15);
+
     } else {
-        std::cerr << "File does not exist or is not a regular file." << std::endl;
+        HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorWin, 12);
+        std::cerr << "Error: File does not exist or is not a regular file." << std::endl;
+        SetConsoleTextAttribute(errorWin, 15);
     }
 }

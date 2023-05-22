@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <filesystem>
 #include "../include.h"
+#include <windows.h>
 
 void directoryManager(const std::string& directory) {
     std::filesystem::path path(directory);
@@ -11,7 +12,10 @@ void directoryManager(const std::string& directory) {
         std::filesystem::current_path(path);
         std::cout << "Changed directory to: " << std::filesystem::current_path() << std::endl;
     } else {
-        std::cerr << "Could not change directory" << std::endl;
+        HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorWin, 12);
+        std::cerr << "Error: Could not change directory" << std::endl;
+        SetConsoleTextAttribute(errorWin, 15);
     }
 }
 

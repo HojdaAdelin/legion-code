@@ -12,7 +12,10 @@ void deleteDirectory() {
     std::filesystem::remove_all(currentPath, ec);
 
     if (ec) {
-        std::cerr << "Failed to delete directory: " << ec.message() << std::endl;
+        HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorWin, 12);
+        std::cerr << "Error: Failed to delete directory: " << ec.message() << std::endl;
+        SetConsoleTextAttribute(errorWin, 15);
     } else {
         std::cout << "Directory deleted!";
     }
