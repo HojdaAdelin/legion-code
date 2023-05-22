@@ -30,6 +30,7 @@ void commandHelp() {
     std::cout << "size -f 'file'    Display file size from a directory\n";
     std::cout << "info -f 'file'    Display file details from a directory\n";
     std::cout << "del -f 'file'     Delete file from a directory\n";
+    std::cout << "-r 'file_name' 'new_name'\n";
 
     
 }

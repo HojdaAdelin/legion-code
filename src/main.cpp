@@ -100,6 +100,22 @@ int main() {
             help(Service);
             std::cout << "\n";
 
+        } else if (command.substr(0, 2) == "-r") {
+            std::cout << "\n";
+            size_t firstSpacePos = command.find(' ');
+            if (firstSpacePos != std::string::npos) {
+                size_t secondSpacePos = command.find(' ', firstSpacePos + 1);
+                if (secondSpacePos != std::string::npos) {
+                    std::string filename = command.substr(firstSpacePos + 1, secondSpacePos - firstSpacePos - 1);
+                    std::string newname = command.substr(secondSpacePos + 1);
+                    renameFile(filename, newname);
+                } else {
+                    std::cout << "Invalid command" << std::endl;
+                }
+            } else {
+                std::cout << "Invalid command" << std::endl;
+            }
+            std::cout << "\n";
         } else {
 
             std::cout << "\nWrong command\n\n";

@@ -59,3 +59,15 @@ void deleteFile(const std::string& filename) {
         std::cerr << "File does not exist or is not a regular file." << std::endl;
     }
 }
+
+void renameFile(const std::string& filename, const std::string& newname) {
+    std::filesystem::path filePath(filename);
+    std::filesystem::path newFilePath(newname);
+    
+    if (std::filesystem::exists(filePath) && std::filesystem::is_regular_file(filePath)) {
+        std::filesystem::rename(filePath, newFilePath);
+        std::cout << "File '" << filename << "' renamed to '" << newname << "' successfully." << std::endl;
+    } else {
+        std::cerr << "File does not exist or is not a regular file." << std::endl;
+    }
+}

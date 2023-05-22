@@ -11,3 +11,4 @@ void help(std::string ServiceString);
 void displayFileSize(const std::string& filename);
 void displayFileDetails(const std::string& filename);
 void deleteFile(const std::string& filename);
+void renameFile(const std::string& filename, const std::string& newname);
