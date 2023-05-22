@@ -94,6 +94,11 @@ int main() {
             help(Service);
             std::cout << "\n";
 
+        } else if (command == "dir view") {
+            std::cout << "\n";
+            viewDirectoryContents();
+            std::cout << "\n";
+
         } else if (command == "log") {
 
             std::string Service = command;
