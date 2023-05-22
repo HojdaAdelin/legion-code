@@ -1,5 +1,5 @@
-# legion-code
-Legion Code is a powerful tool terminal working with files and directories.
+# Legion Code
+### Legion Code is a powerful tool terminal working with files and directories.
 
 # Features
 
@@ -45,12 +45,12 @@ dir view          View directory content
 # Console view
 
 <p align="center">
-<img src="Images/App.png" height="350" width="750" />
+<img src="Images/App.png" height="400" width="750" />
 </p>
 
 # Build
 
-This project use G++ compiler.\
-If you don't know how G++ work go to [Build](doc/BUILD.md) doc.\
-[G++](https://code.visualstudio.com/docs/cpp/config-mingw) download.\
-[VS Code](https://code.visualstudio.com/) download.
+### This project use G++ compiler.
+### If you don't know how G++ work go to [Build](doc/BUILD.md) doc.
+### [G++](https://code.visualstudio.com/docs/cpp/config-mingw) download.
+### [VS Code](https://code.visualstudio.com/) download.
