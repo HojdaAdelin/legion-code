@@ -51,6 +51,12 @@ int main() {
             deleteFile(filename);
             std::cout << "\n";
             
+        } else if (command.substr(0, 7) == "compres") {
+            std::cout << "\n";
+            std::string filename = command.substr(8);
+            compressFile(filename);
+            std::cout << "\n";
+            
         } else if (command == "dir -z") {
             std::cout << "\n";
             std::filesystem::path currentPath = std::filesystem::current_path();

@@ -35,6 +35,7 @@ void commandHelp() {
     std::cout << "dir -z            Go to previous directory\n";
     std::cout << "dir -x            Go to last directory\n";
     std::cout << "rand 'min' 'max'  Random number between min and max numbers we enter\n";
+    std::cout << "compres 'file'    Create a .zip arhive with the file\n";
 
 
     

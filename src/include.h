@@ -20,3 +20,4 @@ void viewDirectoryContents();
 void goToPreviousDirectory();
 void goToLastDirectory(std::stack<std::filesystem::path> lastDirStack);
 void generatorNumber(int min, int max);
+void compressFile(const std::string& file);

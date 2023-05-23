@@ -98,3 +98,20 @@ void renameFile(const std::string& filename, const std::string& newname) {
         SetConsoleTextAttribute(errorWin, 15);
     }
 }
+
+void compressFile(const std::string& file) {
+    std::string command = "powershell Compress-Archive -Path " + file + " -DestinationPath compressed.zip";
+    int result = std::system(command.c_str());
+    if (result == 0) {
+        std::cout << "File compressed";
+        HANDLE winColor = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(winColor, 2);
+        std::cout << " successfully." << std::endl;
+        SetConsoleTextAttribute(winColor, 15);
+    } else {
+        HANDLE errorWin = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorWin, 12);
+        std::cerr << "Error: Failed to compress file." << std::endl;
+        SetConsoleTextAttribute(errorWin, 15);
+    }
+}
