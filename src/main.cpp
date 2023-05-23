@@ -6,6 +6,8 @@
 #include "include.h"
 #include <handleapi.h>
 #include <windows.h>
+#include <stack>
+std::stack<std::filesystem::path> directoryStack;
 
 int main() {
 
@@ -47,6 +49,18 @@ int main() {
             std::cout << "\n";
             std::string filename = command.substr(7);
             deleteFile(filename);
+            std::cout << "\n";
+            
+        } else if (command == "dir -z") {
+            std::cout << "\n";
+            std::filesystem::path currentPath = std::filesystem::current_path();
+            directoryStack.push(currentPath);
+            goToPreviousDirectory();
+            std::cout << "\n";
+
+        } else if (command == "dir -x") {
+            std::cout << "\n";
+            goToLastDirectory(directoryStack);
             std::cout << "\n";
             
         } else if (command.substr(0, 3) == "cd ") {

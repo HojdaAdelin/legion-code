@@ -32,6 +32,8 @@ void commandHelp() {
     std::cout << "del -f 'file'     Delete file from a directory\n";
     std::cout << "-r 'file_name' 'new_name'         Rename file from the directory\n";
     std::cout << "dir view          View directory content\n";
+    std::cout << "dir -z            Go to previous directory\n";
+    std::cout << "dir -x            Go to last directory\n";
 
     
 }
