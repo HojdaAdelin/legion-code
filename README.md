@@ -41,6 +41,7 @@ del -f 'file'     Delete file from a directory
 dir view          View directory content
 dir -z            Go to previous directory
 dir -x            Go to last directory
+rand 'min' 'max'  Random number between min and max numbers we enter
 
 </pre>
 
