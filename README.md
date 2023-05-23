@@ -39,6 +39,8 @@ info -f 'file'    Display file details from a directory
 del -f 'file'     Delete file from a directory
 -r 'file_name' 'new_name'         Rename file from the directory
 dir view          View directory content
+dir -z            Go to previous directory
+dir -x            Go to last directory
 
 </pre>
 
