@@ -19,3 +19,4 @@ void renameFile(const std::string& filename, const std::string& newname);
 void viewDirectoryContents();
 void goToPreviousDirectory();
 void goToLastDirectory(std::stack<std::filesystem::path> lastDirStack);
+void generatorNumber(int min, int max);

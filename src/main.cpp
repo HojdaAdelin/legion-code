@@ -119,6 +119,30 @@ int main() {
             help(Service);
             std::cout << "\n";
 
+        } else if (command.substr(0, 4) == "rand") {
+            std::cout << "\n";
+            size_t firstSpacePos = command.find(' ');
+            if (firstSpacePos != std::string::npos) {
+                size_t secondSpacePos = command.find(' ', firstSpacePos + 1);
+                if (secondSpacePos != std::string::npos) {
+                    std::string minString = command.substr(firstSpacePos + 1, secondSpacePos - firstSpacePos - 1);
+                    std::string maxString = command.substr(secondSpacePos + 1);
+                    
+                    try {
+                        int minim = std::stoi(minString);
+                        int maxim = std::stoi(maxString);
+                        generatorNumber(minim, maxim);
+                        
+                    } catch (const std::invalid_argument&) {
+                        std::cerr << "Invalid arguments. Please enter integer values for 'min' and 'max'." << std::endl;
+                    }
+                } else {
+                    std::cout << "Invalid command" << std::endl;
+                }
+            } else {
+                std::cout << "Invalid command" << std::endl;
+            }
+            std::cout << "\n";
         } else if (command.substr(0, 2) == "-r") {
             std::cout << "\n";
             size_t firstSpacePos = command.find(' ');
