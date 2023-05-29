@@ -126,6 +126,13 @@ int main() {
             closeApps(close);
             std::cout << "\n";
 
+        } else if (command.substr(0, 5) == "view ") {
+
+            std::cout << "\n";
+            std::string file = command.substr(5);
+            viewFileContent(file);
+            std::cout << "\n";
+
         } else if (command == "version") {
 
             std::string Service = command;

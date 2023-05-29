@@ -24,3 +24,4 @@ void compressFile(const std::string& file);
 void viewInstalledApps();
 void startApps(std::string name);
 void closeApps(std::string closeName);
+void viewFileContent(const std::string& fileName);

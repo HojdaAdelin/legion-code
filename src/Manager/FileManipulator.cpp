@@ -2,6 +2,7 @@
 #include <string>
 #include <filesystem>
 #include <windows.h>
+#include <fstream>
 
 void displayFileSize(const std::string& filename) {
     std::filesystem::path filePath(filename);
@@ -114,4 +115,29 @@ void compressFile(const std::string& file) {
         std::cerr << "Error: Failed to compress file." << std::endl;
         SetConsoleTextAttribute(errorWin, 15);
     }
+}
+
+void viewFileContent(const std::string& fileName) {
+
+    HANDLE fileColor = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(fileColor, 2);
+    std::cout << fileName;
+    SetConsoleTextAttribute(fileColor, 15);
+    std::cout << " content:\n\n";
+    std::ifstream file(fileName);
+
+    if (!file.is_open()) {
+        HANDLE errorColor = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(errorColor, 12);
+        std::cout << "Failed to open file: " << fileName << std::endl;
+        SetConsoleTextAttribute(errorColor, 15);
+        return;
+    }
+
+    std::string line;
+    while (std::getline(file, line)) {
+        std::cout << line << std::endl;
+    }
+
+    file.close();
 }
