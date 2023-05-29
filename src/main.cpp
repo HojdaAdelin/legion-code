@@ -119,6 +119,13 @@ int main() {
             startApps(app);
             std::cout << "\n";
 
+        } else if (command.substr(0, 6) == "close ") {
+
+            std::cout << "\n";
+            std::string close = command.substr(6);
+            closeApps(close);
+            std::cout << "\n";
+
         } else if (command == "version") {
 
             std::string Service = command;

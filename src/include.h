@@ -23,3 +23,4 @@ void generatorNumber(int min, int max);
 void compressFile(const std::string& file);
 void viewInstalledApps();
 void startApps(std::string name);
+void closeApps(std::string closeName);

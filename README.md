@@ -46,6 +46,7 @@ compres 'file'    Create a .zip arhive with the file
 code .            Open VS Code on the current directory
 apps view         Display all apps that are installed on user PC
 open 'app name'   Open a specific app
+close 'app name'  Close a specific app
 
 </pre>
 

@@ -7,9 +7,9 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.0 BETA\n";
+        std::cout << "\nVersion: 1.0.5\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Main deployment\n";
+        std::cout << "\n-Downloaded apps\n-VS Code command\n-Open app\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -39,6 +39,7 @@ void commandHelp() {
     std::cout << "code .            Open VS Code on current directory\n";
     std::cout << "apps view         Display all apps that are installed on user PC\n";
     std::cout << "open 'app name'   Open a specific app\n";
+    std::cout << "close 'app name'  Close a specific app\n";
 
 
     
