@@ -113,6 +113,12 @@ int main() {
             help(Service);
             std::cout << "\n";
 
+        } else if (command.substr(0, 5) == "open ") {
+
+            std::string app = command.substr(5);
+            startApps(app);
+            std::cout << "\n";
+
         } else if (command == "version") {
 
             std::string Service = command;

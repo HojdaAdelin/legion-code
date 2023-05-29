@@ -45,6 +45,7 @@ rand 'min' 'max'  Random number between min and max numbers we enter
 compres 'file'    Create a .zip arhive with the file
 code .            Open VS Code on the current directory
 apps view         Display all apps that are installed on user PC
+open 'app name'   Open a specific app
 
 </pre>
 

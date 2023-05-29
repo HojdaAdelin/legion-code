@@ -22,3 +22,4 @@ void goToLastDirectory(std::stack<std::filesystem::path> lastDirStack);
 void generatorNumber(int min, int max);
 void compressFile(const std::string& file);
 void viewInstalledApps();
+void startApps(std::string name);

@@ -38,6 +38,7 @@ void commandHelp() {
     std::cout << "compres 'file'    Create a .zip arhive with the file\n";
     std::cout << "code .            Open VS Code on current directory\n";
     std::cout << "apps view         Display all apps that are installed on user PC\n";
+    std::cout << "open 'app name'   Open a specific app\n";
 
 
     
