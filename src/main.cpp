@@ -57,6 +57,11 @@ int main() {
             compressFile(filename);
             std::cout << "\n";
             
+        } else if (command == "code .") {
+
+            system("code .");
+            std::cout << "\n";
+            
         } else if (command == "dir -z") {
             std::cout << "\n";
             std::filesystem::path currentPath = std::filesystem::current_path();
@@ -117,6 +122,12 @@ int main() {
         } else if (command == "dir view") {
             std::cout << "\n";
             viewDirectoryContents();
+            std::cout << "\n";
+
+        } else if (command == "apps view") {
+            
+            std::cout << "\n";
+            viewInstalledApps();
             std::cout << "\n";
 
         } else if (command == "log") {

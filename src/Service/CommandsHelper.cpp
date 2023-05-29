@@ -36,6 +36,8 @@ void commandHelp() {
     std::cout << "dir -x            Go to last directory\n";
     std::cout << "rand 'min' 'max'  Random number between min and max numbers we enter\n";
     std::cout << "compres 'file'    Create a .zip arhive with the file\n";
+    std::cout << "code .            Open VS Code on current directory\n";
+    std::cout << "apps view         Display all apps that are installed on user PC\n";
 
 
     
