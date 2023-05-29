@@ -3,6 +3,7 @@
 #include <filesystem>
 #include <windows.h>
 #include <fstream>
+#include "../include.h"
 
 void displayFileSize(const std::string& filename) {
     std::filesystem::path filePath(filename);
@@ -136,7 +137,8 @@ void viewFileContent(const std::string& fileName) {
 
     std::string line;
     while (std::getline(file, line)) {
-        std::cout << line << std::endl;
+        highlightKeywords(line);
+        std::cout <<  std::endl;
     }
 
     file.close();

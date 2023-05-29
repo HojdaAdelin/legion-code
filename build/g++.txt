@@ -7,4 +7,5 @@ src/Manager/ModulManipulator.cpp,
 src/Manager/FileManipulator.cpp,
 src/Function/RandomGenerator.cpp,
 src/Manager/Registry.cpp,
-src/Function/WebOpenFunction.cpp
+src/Function/WebOpenFunction.cpp,
+src/Settings/TextHighlight.cpp

@@ -21,6 +21,8 @@
 
 - Console colors
 
+- Text highlighted
+
 # Commands
 
 <pre>

@@ -25,3 +25,4 @@ void viewInstalledApps();
 void startApps(std::string name);
 void closeApps(std::string closeName);
 void viewFileContent(const std::string& fileName);
+void highlightKeywords(const std::string& line);
