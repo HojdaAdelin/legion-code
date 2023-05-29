@@ -8,4 +8,5 @@ src/Manager/FileManipulator.cpp,
 src/Function/RandomGenerator.cpp,
 src/Manager/Registry.cpp,
 src/Function/WebOpenFunction.cpp,
-src/Settings/TextHighlight.cpp
+src/Settings/TextHighlight.cpp,
+src/Settings/UserInputWebOpenerFunction.cpp

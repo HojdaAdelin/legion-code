@@ -7,9 +7,9 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.0.5\n";
+        std::cout << "\nVersion: 1.0.7\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Downloaded apps\n-VS Code command\n-Open app\n-File content view\n";
+        std::cout << "\n-Downloaded apps\n-VS Code command\n-Open app\n-File content view\n-Text highlight\nStack 'link'\n.web\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -41,6 +41,8 @@ void commandHelp() {
     std::cout << "open 'app name'   Open a specific app\n";
     std::cout << "close 'app name'  Close a specific app\n";
     std::cout << "view 'file name'  Display the content of the file\n";
+    std::cout << "stack 'link'      Store a link enter by the user\n";
+    std::cout << ".web              Open the link was stored\n";
 
     
 }

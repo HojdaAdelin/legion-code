@@ -126,6 +126,18 @@ int main() {
             closeApps(close);
             std::cout << "\n";
 
+        } else if (command.substr(0, 6) == "stack ") {
+
+            std::cout << "\n";
+            std::string link = command.substr(6);
+            stackLink(link);
+            std::cout << "\n";
+
+        } else if (command == ".web") {
+            
+            openStackedLink();
+            std::cout << "\n";
+
         } else if (command.substr(0, 5) == "view ") {
 
             std::cout << "\n";

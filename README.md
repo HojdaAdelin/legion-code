@@ -50,6 +50,8 @@ apps view         Display all apps that are installed on user PC
 open 'app name'   Open a specific app
 close 'app name'  Close a specific app
 view 'file name'  Display the content of a file
+stack 'link'      Store a link
+.web              Open stores link
 
 </pre>
 
