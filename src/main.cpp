@@ -133,6 +133,18 @@ int main() {
             stackLink(link);
             std::cout << "\n";
 
+        } else if (command.substr(0, 5) =="open ") {
+
+            std::cout << "\n";
+            std::string link = command.substr(5);
+            userOpenLink(link);
+
+        } else if (command == "delete stack") {
+
+            std::cout << "\n";
+            userLinkDelete();
+            std::cout << "\n";
+
         } else if (command == ".web") {
             
             openStackedLink();

@@ -58,6 +58,8 @@ view 'file name'  Display the content of a file
 stack 'link'      Store a link
 .web              Open stores link
 view stack        Display stored link
+open 'link'       Open a link
+delete stack      Delete stored link
 
 </pre>
 

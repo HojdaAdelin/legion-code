@@ -24,8 +24,9 @@ void openStackedLink() {
     readLink >> link;
 
     readLink.close();
-
+    
     system(std::string("start " + link).c_str());
+
 
 }
 
@@ -42,5 +43,23 @@ void viewStackedLink() {
     SetConsoleTextAttribute(storedLink, 2);
     std::cout << link << std::endl;
     SetConsoleTextAttribute(storedLink, 15);
+
+}
+
+void userOpenLink(std::string inputLink) {
+
+    system(std::string("start " + inputLink).c_str());
+
+}
+
+void userLinkDelete() {
+
+    std::ofstream deleteLink("link.txt");
+
+    deleteLink << " " << std::endl;
+
+    deleteLink.close();
+    
+    std::cout << "The link was deleted!" << std::endl;
 
 }
