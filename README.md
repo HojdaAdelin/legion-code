@@ -1,4 +1,9 @@
 # Legion Code
+
+<p align="center">
+  <img src="assets/$.png" width="200" height="200">
+</p>
+
 ### Legion Code is a powerful tool terminal working with files and directories.
 
 # Features
