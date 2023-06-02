@@ -1,4 +1,5 @@
-g++ -o LegionCode.exe, 
+g++ -o LegionCode.exe,
+icon.res,
 src/main.cpp, 
 src/Manager/DirectoryString.cpp,
 src/Service/CommandsHelper.cpp, 
