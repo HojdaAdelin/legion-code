@@ -138,6 +138,13 @@ int main() {
             openStackedLink();
             std::cout << "\n";
 
+        } else if (command == "view stack") {
+
+            std::cout << "\n";
+
+            viewStackedLink();
+
+            std::cout << "\n";
         } else if (command.substr(0, 5) == "view ") {
 
             std::cout << "\n";

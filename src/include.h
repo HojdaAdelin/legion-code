@@ -28,3 +28,4 @@ void viewFileContent(const std::string& fileName);
 void highlightKeywords(const std::string& line);
 void stackLink(std::string stack);
 void openStackedLink();
+void viewStackedLink();

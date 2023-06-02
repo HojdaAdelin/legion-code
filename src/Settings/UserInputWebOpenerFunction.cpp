@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "../include.h"
+#include <windows.h>
 
 
 void stackLink(std::string stack) {
@@ -9,17 +10,37 @@ void stackLink(std::string stack) {
     storeLink << stack;
 
     storeLink.close();
-    std::cout << stack << " was successfully stored!\n";
+    HANDLE stackColor = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(stackColor, 2);
+    std::cout << stack;
+    SetConsoleTextAttribute(stackColor, 15);
+    std::cout << " was succesfully stored!\n";
 }
 
 void openStackedLink() {
 
     std::string link;
-    std::ifstream readLink("link.ini");
+    std::ifstream readLink("link.txt");
     readLink >> link;
 
     readLink.close();
 
     system(std::string("start " + link).c_str());
+
+}
+
+void viewStackedLink() {
+
+    std::string link;
+    std::ifstream readLink("link.txt");
+
+    readLink >> link;
+
+    readLink.close();
+    std::cout << "Stored link: ";
+    HANDLE storedLink = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(storedLink, 2);
+    std::cout << link << std::endl;
+    SetConsoleTextAttribute(storedLink, 15);
 
 }

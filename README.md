@@ -57,6 +57,7 @@ close 'app name'  Close a specific app
 view 'file name'  Display the content of a file
 stack 'link'      Store a link
 .web              Open stores link
+view stack        Display stored link
 
 </pre>
 
