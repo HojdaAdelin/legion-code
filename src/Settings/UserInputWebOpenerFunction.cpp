@@ -25,8 +25,9 @@ void openStackedLink() {
 
     readLink.close();
     
-    system(std::string("start " + link).c_str());
-
+    if (int open = system(std::string("start " + link).c_str()) != 0) {
+        open = system(std::string("start https://" + link).c_str());
+    } 
 
 }
 

@@ -31,3 +31,4 @@ void openStackedLink();
 void viewStackedLink();
 void userOpenLink(std::string inputLink);
 void userLinkDelete();
+void TempExecutable();

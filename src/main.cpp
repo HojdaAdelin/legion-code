@@ -139,6 +139,12 @@ int main() {
             std::string link = command.substr(5);
             userOpenLink(link);
 
+        } else if (command == "temp") {
+
+            std::cout << "\n";
+            TempExecutable();
+            std::cout << "\n";
+
         } else if (command == "delete stack") {
 
             std::cout << "\n";

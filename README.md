@@ -60,6 +60,7 @@ stack 'link'      Store a link
 view stack        Display stored link
 open 'link'       Open a link
 delete stack      Delete stored link
+temp              Clean temp files
 
 </pre>
 
