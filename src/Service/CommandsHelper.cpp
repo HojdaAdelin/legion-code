@@ -7,9 +7,9 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.1.2\n";
+        std::cout << "\nVersion: 1.1.3\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Temp clean\n";
+        std::cout << "\n-Temp clean\n-Arhive view\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -47,6 +47,6 @@ void commandHelp() {
     std::cout << "open 'link'       Open a link\n";
     std::cout << "delete stack      Delete stored link\n";
     std::cout << "temp              Clean temp folder\n";
-
+    std::cout << "arh -v 'name'     Display the content of an arhive\n";
     
 }

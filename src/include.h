@@ -32,3 +32,4 @@ void viewStackedLink();
 void userOpenLink(std::string inputLink);
 void userLinkDelete();
 void TempExecutable();
+void displayArchiveContent(const std::string& archivePath);

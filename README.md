@@ -61,6 +61,7 @@ view stack        Display stored link
 open 'link'       Open a link
 delete stack      Delete stored link
 temp              Clean temp files
+arh -v 'name'     Display the content of an arhive
 
 </pre>
 

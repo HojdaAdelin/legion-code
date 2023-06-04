@@ -11,4 +11,5 @@ src/Manager/Registry.cpp,
 src/Function/WebOpenFunction.cpp,
 src/Settings/TextHighlight.cpp,
 src/Settings/UserInputWebOpenerFunction.cpp,
-src/Function/CleanTemp.cpp
+src/Function/CleanTemp.cpp,
+src/Manager/Archive.cpp

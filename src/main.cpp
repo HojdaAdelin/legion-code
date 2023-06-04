@@ -156,6 +156,13 @@ int main() {
             openStackedLink();
             std::cout << "\n";
 
+        } else if (command.substr(0, 7) == "arh -v ") {
+
+            std::cout << "\n";
+            const std::string& arhive = command.substr(7);
+            displayArchiveContent(arhive);
+            std::cout << "\n";
+
         } else if (command == "view stack") {
 
             std::cout << "\n";
