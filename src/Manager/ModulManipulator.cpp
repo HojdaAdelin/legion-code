@@ -32,16 +32,35 @@ void viewDirectoryContents() {
             std::cout << "File: ";
             SetConsoleTextAttribute(fileColor, 15);
 
-            std::cout << entry.path().filename() << std::endl;
+            std::cout << entry.path().filename();
+            std::filesystem::path filePath(entry.path().filename());
+            std::uintmax_t fileSize = std::filesystem::file_size(filePath);
+            std::cout << " with ";
+            SetConsoleTextAttribute(fileColor, 2);
+            std::cout << fileSize;
+            SetConsoleTextAttribute(fileColor, 15);
+            std::cout << " bytes." << std::endl;
 
         } else if (entry.is_directory()) {
+
+            int fileCount = 0;
+            for (const auto& entry : std::filesystem::directory_iterator(entry.path().filename())) {
+                if (entry.is_regular_file()) {
+                    fileCount++;
+                }
+            }
 
             HANDLE fileColor = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(fileColor, 2);
             std::cout << "Folder: ";
             SetConsoleTextAttribute(fileColor, 15);
 
-            std::cout << entry.path().filename() << std::endl;
+            std::cout << entry.path().filename();
+            std::cout << " with ";
+            SetConsoleTextAttribute(fileColor, 2);
+            std::cout << fileCount;
+            SetConsoleTextAttribute(fileColor, 15);
+            std::cout << " files." << std::endl;
         }
     }
 }
