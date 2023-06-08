@@ -51,13 +51,13 @@ void viewDirectoryContents() {
             }
 
             HANDLE fileColor = GetStdHandle(STD_OUTPUT_HANDLE);
-            SetConsoleTextAttribute(fileColor, 2);
+            SetConsoleTextAttribute(fileColor, 14);
             std::cout << "Folder: ";
             SetConsoleTextAttribute(fileColor, 15);
 
             std::cout << entry.path().filename();
             std::cout << " with ";
-            SetConsoleTextAttribute(fileColor, 2);
+            SetConsoleTextAttribute(fileColor, 14);
             std::cout << fileCount;
             SetConsoleTextAttribute(fileColor, 15);
             std::cout << " files." << std::endl;

@@ -32,7 +32,7 @@ void displayArchiveContent(const std::string& archivePath) {
                 
             } else if (entryType == "folder:") {
                 HANDLE colorCode = GetStdHandle(STD_OUTPUT_HANDLE);
-                SetConsoleTextAttribute(colorCode, 2);
+                SetConsoleTextAttribute(colorCode, 14);
                 std::cout << "Folder: ";
                 SetConsoleTextAttribute(colorCode, 15);
                 std::cout << entryPath << std::endl;

@@ -9,7 +9,7 @@ void help(std::string ServiceString) {
     } else if (ServiceString == "version") {
         std::cout << "\nVersion: 1.1.4\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Temp clean\n-Arhive view\n-Modul view update";
+        std::cout << "\n-Temp clean\n-Arhive view\n-Modul view update\n-Change colors";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 

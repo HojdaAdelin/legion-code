@@ -46,7 +46,7 @@ void DeleteAllFiles(std::string strPath)
           if(RemoveDirectory(strPathFile.c_str()))
 					{ 
             HANDLE deleteColor = GetStdHandle(STD_OUTPUT_HANDLE);
-            SetConsoleTextAttribute(deleteColor, 2);
+            SetConsoleTextAttribute(deleteColor, 14);
             std::cout << "deleted directory : ";
             SetConsoleTextAttribute(deleteColor, 15);
             std::cout << strPathFile.c_str() << std::endl;
@@ -66,11 +66,17 @@ void DeleteAllFiles(std::string strPath)
         // delete the file
         if(DeleteFile(strPathFile.c_str()))
 				{
+          HANDLE deleteColor = GetStdHandle(STD_OUTPUT_HANDLE);
+          SetConsoleTextAttribute(errorColor, 2);
           std::cout << "deleted file: " << strPathFile.c_str() << std::endl;
+          SetConsoleTextAttribute(errorColor, 15);
         }
 				else
 				{
+          HANDLE deleteColor = GetStdHandle(STD_OUTPUT_HANDLE);
+          SetConsoleTextAttribute(errorColor, 12);
           std::cout << "could not delete file: " << strPathFile.c_str() << std::endl;
+          SetConsoleTextAttribute(errorColor, 15);
         }
       }
     }
