@@ -65,6 +65,8 @@ arh -v 'name'     Display the content of an arhive
 
 </pre>
 
+### For archive commands you need to install [7-Zip](https://www.7-zip.org/)
+
 # Console view
 
 <p align="center">
