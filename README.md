@@ -79,3 +79,10 @@ arh -v 'name'     Display the content of an arhive
 ### If you don't know how G++ work go to [Build](doc/BUILD.md) doc.
 ### [G++](https://code.visualstudio.com/docs/cpp/config-mingw) download.
 ### [VS Code](https://code.visualstudio.com/) download.
+
+# Soon
+
+- [ ] Windows execution commands
+- [ ] Git support
+- [ ] Theme selection
+- [ ] Redesign help command
