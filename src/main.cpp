@@ -69,6 +69,12 @@ int main() {
             goToPreviousDirectory();
             std::cout << "\n";
 
+        } else if (command == "git add .") {
+
+            std::cout<<"\n";
+            GitCloneAdding();
+            std::cout<<"\n";
+
         } else if (command == "dir -x") {
             std::cout << "\n";
             goToLastDirectory(directoryStack);

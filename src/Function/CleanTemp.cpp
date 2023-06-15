@@ -67,16 +67,16 @@ void DeleteAllFiles(std::string strPath)
         if(DeleteFile(strPathFile.c_str()))
 				{
           HANDLE deleteColor = GetStdHandle(STD_OUTPUT_HANDLE);
-          SetConsoleTextAttribute(errorColor, 2);
+          SetConsoleTextAttribute(deleteColor, 2);
           std::cout << "deleted file: " << strPathFile.c_str() << std::endl;
-          SetConsoleTextAttribute(errorColor, 15);
+          SetConsoleTextAttribute(deleteColor, 15);
         }
 				else
 				{
           HANDLE deleteColor = GetStdHandle(STD_OUTPUT_HANDLE);
-          SetConsoleTextAttribute(errorColor, 12);
+          SetConsoleTextAttribute(deleteColor, 12);
           std::cout << "could not delete file: " << strPathFile.c_str() << std::endl;
-          SetConsoleTextAttribute(errorColor, 15);
+          SetConsoleTextAttribute(deleteColor, 15);
         }
       }
     }
