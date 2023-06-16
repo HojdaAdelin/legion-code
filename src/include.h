@@ -38,3 +38,5 @@ void GitCloneMerge(std::string text);
 void GitClonePush();
 void GitCloneRepo(std::string project);
 void GitClonePull();
+void GitCloneStatus();
+void GitCloneHistory();

@@ -76,6 +76,8 @@ git commit -m
 git push
 git clone
 git pull
+git status
+git log
 </pre>
 
 ### For archive commands you need to install [7-Zip](https://www.7-zip.org/)

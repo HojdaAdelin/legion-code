@@ -62,6 +62,18 @@ int main() {
             system("code .");
             std::cout << "\n";
             
+        } else if (command == "git status") {
+
+            std::cout << "\n";
+            GitCloneStatus();
+            std::cout << "\n";
+
+        } else if (command == "git log") {
+
+            std::cout << "\n";
+            GitCloneHistory();
+            std::cout << "\n";
+
         } else if (command == "git push") {
 
             std::cout << "\n";

@@ -97,3 +97,31 @@ void GitClonePull() {
     
 
 }
+
+void GitCloneStatus() {
+
+    try
+    {
+        system("git status");
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+
+}
+
+void GitCloneHistory() {
+
+    try
+    {
+        system("git log");
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+
+}
