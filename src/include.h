@@ -36,3 +36,4 @@ void displayArchiveContent(const std::string& archivePath);
 void GitCloneAdding();
 void GitCloneMerge(std::string text);
 void GitClonePush();
+void GitCloneRepo(std::string project);

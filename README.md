@@ -67,12 +67,14 @@ arh -v 'name'     Display the content of an arhive
 
 ## Git Supported Commands
 
+[Git](https://git-scm.com/) download.
+
 <pre>
 
 git add .
 git commit -m
 git push
-
+git clone
 </pre>
 
 ### For archive commands you need to install [7-Zip](https://www.7-zip.org/)

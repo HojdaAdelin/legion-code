@@ -59,3 +59,19 @@ void GitClonePush() {
     
 
 }
+
+void GitCloneRepo(std::string project) {
+
+    try
+    {
+        
+        system(std::string("git clone " + project).c_str());
+
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+
+}

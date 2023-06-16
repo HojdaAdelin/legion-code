@@ -75,6 +75,13 @@ int main() {
             GitCloneMerge(text);
             std::cout << "\n";
 
+        } else if (command.substr(0, 9) == "git clone") {
+
+            std::string project = command.substr(10);
+            std::cout << "\n";
+            GitCloneRepo(project);
+            std::cout << "\n";
+
         } else if (command == "dir -z") {
             std::cout << "\n";
             std::filesystem::path currentPath = std::filesystem::current_path();
