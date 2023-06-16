@@ -62,6 +62,12 @@ int main() {
             system("code .");
             std::cout << "\n";
             
+        } else if (command == "git push") {
+
+            std::cout << "\n";
+            GitClonePush();
+            std::cout << "\n";
+
         } else if (command.substr(0, 13) == "git commit -m") {
 
             std::string text = command.substr(14);

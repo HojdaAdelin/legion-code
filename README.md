@@ -71,6 +71,7 @@ arh -v 'name'     Display the content of an arhive
 
 git add .
 git commit -m
+git push
 
 </pre>
 

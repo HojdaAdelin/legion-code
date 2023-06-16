@@ -44,6 +44,18 @@ void GitCloneMerge(std::string text) {
         std::cerr << e.what() << '\n';
     }
     
+}
 
+void GitClonePush() {
+
+    try
+    {
+        system("git push");
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 
 }
