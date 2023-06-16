@@ -98,6 +98,7 @@ git log
 # Soon
 
 - [ ] Windows execution commands
-- [ ] Git support
+- [x] Git support
 - [ ] Theme selection
 - [ ] Redesign help command
+- [ ] Open current directory in explorer
