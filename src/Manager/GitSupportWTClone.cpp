@@ -40,8 +40,10 @@ void GitCloneMerge(std::string text) {
 
     }
     catch(const std::exception& e)
-    {
+    {   
+        SetConsoleTextAttribute(colorAttribute, 14);
         std::cerr << e.what() << '\n';
+        SetConsoleTextAttribute(colorAttribute, 15);
     }
     
 }
@@ -53,8 +55,10 @@ void GitClonePush() {
         system("git push");
     }
     catch(const std::exception& e)
-    {
+    {   
+        SetConsoleTextAttribute(colorAttribute, 14);
         std::cerr << e.what() << '\n';
+        SetConsoleTextAttribute(colorAttribute, 15);
     }
     
 
@@ -70,7 +74,25 @@ void GitCloneRepo(std::string project) {
     }
     catch(const std::exception& e)
     {
+        SetConsoleTextAttribute(colorAttribute, 14);
         std::cerr << e.what() << '\n';
+        SetConsoleTextAttribute(colorAttribute, 15);
+    }
+    
+
+}
+
+void GitClonePull() {
+
+    try
+    {
+        system("git pull");
+    }
+    catch(const std::exception& e)
+    {   
+        SetConsoleTextAttribute(colorAttribute, 14);
+        std::cerr << e.what() << '\n';
+        SetConsoleTextAttribute(colorAttribute, 15);
     }
     
 

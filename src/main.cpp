@@ -68,6 +68,12 @@ int main() {
             GitClonePush();
             std::cout << "\n";
 
+        } else if (command == "git pull") {
+
+            std::cout << "\n";
+            GitClonePull();
+            std::cout << "\n";
+
         } else if (command.substr(0, 13) == "git commit -m") {
 
             std::string text = command.substr(14);
