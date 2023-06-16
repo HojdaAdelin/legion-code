@@ -62,6 +62,13 @@ int main() {
             system("code .");
             std::cout << "\n";
             
+        } else if (command.substr(0, 13) == "git commit -m") {
+
+            std::string text = command.substr(14);
+            std::cout << "\n";
+            GitCloneMerge(text);
+            std::cout << "\n";
+
         } else if (command == "dir -z") {
             std::cout << "\n";
             std::filesystem::path currentPath = std::filesystem::current_path();

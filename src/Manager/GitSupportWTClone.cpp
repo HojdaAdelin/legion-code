@@ -2,6 +2,7 @@
 #include <iostream>
 #include <windows.h>
 
+
 HANDLE colorAttribute = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void GitCloneAdding() {
@@ -23,6 +24,26 @@ void GitCloneAdding() {
         SetConsoleTextAttribute(colorAttribute, 15);
 
     }
+
+
+}
+
+
+void GitCloneMerge(std::string text) {
+
+    std::string note = "Note: Modifications added";
+
+    try
+    {
+        
+        system(std::string("git commit -m " + text).c_str());
+
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 
 
 }

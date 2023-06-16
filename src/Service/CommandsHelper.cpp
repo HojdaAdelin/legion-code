@@ -1,15 +1,17 @@
 #include <iostream>
 #include "../include.h"
+#include <windows.h>
 
+HANDLE colorAtribute = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void help(std::string ServiceString) {
 
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.1.4\n";
+        std::cout << "\nVersion: 1.1.6\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Temp clean\n-Arhive view\n-Modul view update\n-Change colors";
+        std::cout << "\n-Temp clean\n-Arhive view\n-Modul view update\n-Change colors\n-Git add\n-Note added";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -18,6 +20,9 @@ void help(std::string ServiceString) {
 
 void commandHelp() {
 
+    SetConsoleTextAttribute(colorAtribute, 2);
+    std::cout << "MAIN COMMANDS\n";
+    SetConsoleTextAttribute(colorAtribute, 15);
     std::cout << "help              Display commands\n";
     std::cout << ".git              Open github\n";
     std::cout << ".source           Open LegionCode source\n";
@@ -48,5 +53,15 @@ void commandHelp() {
     std::cout << "delete stack      Delete stored link\n";
     std::cout << "temp              Clean temp folder\n";
     std::cout << "arh -v 'name'     Display the content of an arhive\n";
+
+    SetConsoleTextAttribute(colorAtribute, 2);
+    std::cout << "\nGit supported commands\n";
+    SetConsoleTextAttribute(colorAtribute, 15);
+    std::cout << "git add .\n";
+    std::cout << "git commit -m\n";
+
+    SetConsoleTextAttribute(colorAtribute, 14);
+    std::cout << "\nNote: If archive commands don't work install 7-Zip.\n";
+    SetConsoleTextAttribute(colorAtribute, 15);
     
 }
