@@ -11,7 +11,7 @@ void help(std::string ServiceString) {
     } else if (ServiceString == "version") {
         std::cout << "\nVersion: 1.1.9\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Temp clean\n-Arhive view\n-Modul view update\n-Change colors\n-Git add\n-Note added\n-Git commit command\n-Git push\n-Git clone\n-Git pull";
+        std::cout << "\n-Temp clean\n-Arhive view\n-Modul view update\n-Change colors\n-Git add\n-Note added\n-Git commit command\n-Git push\n-Git clone\n-Git pull\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
