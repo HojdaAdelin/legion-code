@@ -81,6 +81,13 @@ int main() {
             GitCloneCheckout(name);
             std::cout << "\n";
 
+        } else if (command.substr(0, 10) == "git branch") {
+
+            std::string branch = command.substr(11);
+            std::cout << "\n";
+            GitCloneBranch();
+            std::cout << "\n";
+
         } else if (command == "git push") {
 
             std::cout << "\n";

@@ -79,6 +79,7 @@ git pull
 git status
 git log
 git checkout
+git branch
 </pre>
 
 ### For archive commands you need to install [7-Zip](https://www.7-zip.org/)

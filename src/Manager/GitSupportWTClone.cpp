@@ -139,3 +139,17 @@ void GitCloneCheckout(std::string name) {
     
 
 }
+
+void GitCloneBranch(std::string branch) {
+
+    try
+    {
+        system(std::string("git branch " + branch).c_str());
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+
+}

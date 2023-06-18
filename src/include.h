@@ -41,3 +41,4 @@ void GitClonePull();
 void GitCloneStatus();
 void GitCloneHistory();
 void GitCloneCheckout(std::string name);
+void GitCloneBranch(std::string branch);
