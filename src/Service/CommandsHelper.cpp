@@ -9,9 +9,9 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.2.3\n";
+        std::cout << "\nVersion: 1.2.4\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Git checkout\n-Git branch\n";
+        std::cout << "\n-Git checkout\n-Git branch\n-Directory opener\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -53,6 +53,7 @@ void commandHelp() {
     std::cout << "delete stack      Delete stored link\n";
     std::cout << "temp              Clean temp folder\n";
     std::cout << "arh -v 'name'     Display the content of an arhive\n";
+    std::cout << "dir -o            Open directory in file explorer\n";
 
     SetConsoleTextAttribute(colorAtribute, 2);
     std::cout << "\nGit supported commands\n";

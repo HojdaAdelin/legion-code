@@ -62,7 +62,7 @@ open 'link'       Open a link
 delete stack      Delete stored link
 temp              Clean temp files
 arh -v 'name'     Display the content of an arhive
-
+dir -o            Open directory in file explorer
 </pre>
 
 ## Git Supported Commands

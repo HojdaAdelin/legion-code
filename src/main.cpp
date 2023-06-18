@@ -74,6 +74,12 @@ int main() {
             GitCloneHistory();
             std::cout << "\n";
 
+        } else if (command == "dir -o") {
+
+            std::cout << "\n";
+            OpenDirectoryToFileExplorer();
+            std::cout << "\n";
+
         } else if (command.substr(0, 12) == "git checkout") {
 
             std::string name = command.substr(13);
@@ -85,7 +91,7 @@ int main() {
 
             std::string branch = command.substr(11);
             std::cout << "\n";
-            GitCloneBranch();
+            GitCloneBranch(branch);
             std::cout << "\n";
 
         } else if (command == "git push") {
