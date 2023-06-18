@@ -125,3 +125,17 @@ void GitCloneHistory() {
     
 
 }
+
+void GitCloneCheckout(std::string name) {
+
+    try
+    {
+        system(std::string("git checkout " + name).c_str());
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+
+}

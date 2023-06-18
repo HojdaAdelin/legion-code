@@ -40,3 +40,4 @@ void GitCloneRepo(std::string project);
 void GitClonePull();
 void GitCloneStatus();
 void GitCloneHistory();
+void GitCloneCheckout(std::string name);

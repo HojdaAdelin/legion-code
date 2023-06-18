@@ -78,6 +78,7 @@ git clone
 git pull
 git status
 git log
+git checkout
 </pre>
 
 ### For archive commands you need to install [7-Zip](https://www.7-zip.org/)

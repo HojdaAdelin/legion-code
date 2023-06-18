@@ -74,6 +74,13 @@ int main() {
             GitCloneHistory();
             std::cout << "\n";
 
+        } else if (command.substr(0, 12) == "git checkout") {
+
+            std::string name = command.substr(13);
+            std::cout << "\n";
+            GitCloneCheckout(name);
+            std::cout << "\n";
+
         } else if (command == "git push") {
 
             std::cout << "\n";

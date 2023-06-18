@@ -9,9 +9,9 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.2.1\n";
+        std::cout << "\nVersion: 1.2.2\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Temp clean\n-Arhive view\n-Modul view update\n-Change colors\n-Git add\n-Note added\n-Git commit command\n-Git push\n-Git clone\n-Git pull\n-Git status\n-Git log\n";
+        std::cout << "\n-Git checkout\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -64,6 +64,7 @@ void commandHelp() {
     std::cout << "git pull\n";
     std::cout << "git status\n";
     std::cout << "git log\n";
+    std::cout << "git checkout\n";
 
     SetConsoleTextAttribute(colorAtribute, 14);
     std::cout << "\nNote: If archive commands don't work install 7-Zip.\n";
