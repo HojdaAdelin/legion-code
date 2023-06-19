@@ -68,6 +68,12 @@ int main() {
             GitCloneStatus();
             std::cout << "\n";
 
+        } else if (command == "git checkout") {
+
+            std::cout << "\n";
+            GitCloneCheckoutFix();
+            std::cout << "\n";
+
         } else if (command == "git log") {
 
             std::cout << "\n";

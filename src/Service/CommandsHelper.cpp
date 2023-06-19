@@ -9,9 +9,9 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.2.4\n";
+        std::cout << "\nVersion: 1.2.5\n";
     } else if (ServiceString == "log") {
-        std::cout << "\n-Git checkout\n-Git branch\n-Directory opener\n";
+        std::cout << "\n-Git checkout\n-Git branch\n-Directory opener\n-Help redesign\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -23,50 +23,51 @@ void commandHelp() {
     SetConsoleTextAttribute(colorAtribute, 2);
     std::cout << "MAIN COMMANDS\n";
     SetConsoleTextAttribute(colorAtribute, 15);
-    std::cout << "help              Display commands\n";
-    std::cout << ".git              Open github\n";
-    std::cout << ".source           Open LegionCode source\n";
-    std::cout << ".bug              Open bugs website\n";
-    std::cout << "cd                Directory change\n";
-    std::cout << "cls               Clear terminal\n";
-    std::cout << "version           Display current version\n";
-    std::cout << "log               Change log\n";
-    std::cout << "del dir           Delete current directory\n";
-    std::cout << "size -f 'file'    Display file size from a directory\n";
-    std::cout << "info -f 'file'    Display file details from a directory\n";
-    std::cout << "del -f 'file'     Delete file from a directory\n";
-    std::cout << "-r 'file_name' 'new_name'         Rename file from the directory\n";
-    std::cout << "dir view          View directory content\n";
-    std::cout << "dir -z            Go to previous directory\n";
-    std::cout << "dir -x            Go to last directory\n";
-    std::cout << "rand 'min' 'max'  Random number between min and max numbers we enter\n";
-    std::cout << "compres 'file'    Create a .zip arhive with the file\n";
-    std::cout << "code .            Open VS Code on current directory\n";
-    std::cout << "apps view         Display all apps that are installed on user PC\n";
-    std::cout << "open 'app name'   Open a specific app\n";
-    std::cout << "close 'app name'  Close a specific app\n";
-    std::cout << "view 'file name'  Display the content of the file\n";
-    std::cout << "stack 'link'      Store a link enter by the user\n";
-    std::cout << ".web              Open the link was stored\n";
-    std::cout << "view stack        Display stored link\n";
-    std::cout << "open 'link'       Open a link\n";
-    std::cout << "delete stack      Delete stored link\n";
-    std::cout << "temp              Clean temp folder\n";
-    std::cout << "arh -v 'name'     Display the content of an arhive\n";
-    std::cout << "dir -o            Open directory in file explorer\n";
+    std::cout << "[ help            All commands                   ]          ";
+    std::cout << "[ .git            Open github                  ]\n";
+    std::cout << "[ .source         Open LegionCode source         ]          ";
+    std::cout << "[ .bug            Open bugs website            ]\n";
+    std::cout << "[ cd              Directory change               ]          ";
+    std::cout << "[ del dir         Delete directory             ]\n";
+    std::cout << "[ dir -z          Previous directory             ]          ";
+    std::cout << "[ dir -x          Last directory               ]\n";
+    std::cout << "[ dir view        View directory                 ]          ";
+    std::cout << "[ dir -o          Open directory in explorer   ]\n";
+    std::cout << "[ version         Display version                ]          ";
+    std::cout << "[ log             Change log                   ]\n";
+    std::cout << "[ cls             Clear terminal                 ]          ";
+    std::cout << "[ rand min max    Random number                ]\n";
+    std::cout << "[ size -f 'file'  File size                      ]          ";
+    std::cout << "[ info -f 'file'  File details                 ]\n";
+    std::cout << "[ del -f 'file'   Delete file                    ]          ";
+    std::cout << "[ -r 'file_name' 'new_name'  Rename file       ]\n";
+    std::cout << "[ view 'name'     Content of the file            ]          ";
+    std::cout << "[ temp            Clean temp folder            ]\n";
+    std::cout << "[ compres 'file'  Archive file                   ]          ";
+    std::cout << "[ arh -v 'name'   Display the archive          ]\n";
+    std::cout << "[ code .          Open VS Code                   ]          ";
+    std::cout << "[ apps view       Display installed apps on PC ]\n";
+    std::cout << "[ open 'app'      Open a specific app            ]          ";
+    std::cout << "[ close 'app'     Close a specific app         ]\n";
+    std::cout << "[ stack 'link'    Store a link enter by the user ]          ";
+    std::cout << "[ .web            Open stored link             ]\n";
+    std::cout << "[ view stack      Display stored link            ]          ";
+    std::cout << "[ open 'link'     Open a link                  ]\n";
+    std::cout << "[ delete stack    Delete stored link             ]          ";
+    
 
     SetConsoleTextAttribute(colorAtribute, 2);
-    std::cout << "\nGit supported commands\n";
+    std::cout << "\n\nGit supported commands\n";
     SetConsoleTextAttribute(colorAtribute, 15);
-    std::cout << "git add .\n";
-    std::cout << "git commit -m\n";
-    std::cout << "git push\n";
-    std::cout << "git clone\n";
-    std::cout << "git pull\n";
-    std::cout << "git status\n";
-    std::cout << "git log\n";
-    std::cout << "git checkout\n";
-    std::cout << "git branch\n";
+    std::cout << "[ git add . ]\n";
+    std::cout << "[ git commit -m ]\n";
+    std::cout << "[ git push ]\n";
+    std::cout << "[ git clone ]\n";
+    std::cout << "[ git pull ]\n";
+    std::cout << "[ git status ]\n";
+    std::cout << "[ git log ]\n";
+    std::cout << "[ git checkout ]\n";
+    std::cout << "[ git branch ]\n";
 
     SetConsoleTextAttribute(colorAtribute, 14);
     std::cout << "\nNote: If archive commands don't work install 7-Zip.\n";

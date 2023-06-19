@@ -43,3 +43,4 @@ void GitCloneHistory();
 void GitCloneCheckout(std::string name);
 void GitCloneBranch(std::string branch);
 void OpenDirectoryToFileExplorer();
+void GitCloneCheckoutFix();

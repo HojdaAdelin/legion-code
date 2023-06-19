@@ -28,6 +28,8 @@
 
 - Text highlighted
 
+- Partial git support
+
 # Commands
 
 <pre>
@@ -103,4 +105,6 @@ git branch
 - [x] Git support
 - [ ] Theme selection
 - [ ] Redesign help command
-- [ ] Open current directory in explorer
+- [x] Open current directory in explorer
+- [ ] Transfer a file to a new directory
+- [ ] Copy a file and paste to a new directory
