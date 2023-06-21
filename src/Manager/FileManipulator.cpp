@@ -13,7 +13,7 @@ void displayFileSize(const std::string& filename) {
         std::cout << "File size of " << filename << ": ";
 
         HANDLE fileColor = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(fileColor, 2);
+        SetConsoleTextAttribute(fileColor, legionEnv());
         std::cout << fileSize << " bytes\n";
         SetConsoleTextAttribute(fileColor, 15);
 
@@ -68,7 +68,7 @@ void deleteFile(const std::string& filename) {
         std::cout << "File '" << filename << "' deleted";
 
         HANDLE winColor = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(winColor, 2);
+        SetConsoleTextAttribute(winColor, legionEnv());
         std::cout << " successfully." << std::endl;
         SetConsoleTextAttribute(winColor, 15);
 
@@ -89,7 +89,7 @@ void renameFile(const std::string& filename, const std::string& newname) {
         std::cout << "File '" << filename << "' renamed to '" << newname;
 
         HANDLE winColor = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(winColor, 2);
+        SetConsoleTextAttribute(winColor, legionEnv());
         std::cout << " successfully." << std::endl;
         SetConsoleTextAttribute(winColor, 15);
 
@@ -107,7 +107,7 @@ void compressFile(const std::string& file) {
     if (result == 0) {
         std::cout << "File compressed";
         HANDLE winColor = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(winColor, 2);
+        SetConsoleTextAttribute(winColor, legionEnv());
         std::cout << " successfully." << std::endl;
         SetConsoleTextAttribute(winColor, 15);
     } else {
@@ -121,7 +121,7 @@ void compressFile(const std::string& file) {
 void viewFileContent(const std::string& fileName) {
 
     HANDLE fileColor = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(fileColor, 2);
+    SetConsoleTextAttribute(fileColor, legionEnv());
     std::cout << fileName;
     SetConsoleTextAttribute(fileColor, 15);
     std::cout << " content:\n\n";

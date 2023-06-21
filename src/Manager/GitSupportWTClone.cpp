@@ -1,6 +1,7 @@
 #include "../include.h"
 #include <iostream>
 #include <windows.h>
+#include <cstdlib>
 
 
 HANDLE colorAttribute = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -13,7 +14,7 @@ void GitCloneAdding() {
 
     if (S_OK == system("git add .")) {
 
-        SetConsoleTextAttribute(colorAttribute, 2);
+        SetConsoleTextAttribute(colorAttribute, legionEnv());
         std::cout << note << std::endl;
         SetConsoleTextAttribute(colorAttribute, 15);
 
@@ -158,7 +159,7 @@ void GitCloneCheckoutFix() {
 
     try
     {
-        system("git checkout")
+        system("git checkout");
     }
     catch(const std::exception& e)
     {

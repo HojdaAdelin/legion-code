@@ -15,7 +15,7 @@ int main() {
     while (true) {
 
         HANDLE Legion = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(Legion, 2);
+        SetConsoleTextAttribute(Legion, legionEnv());
         std::cout << "$LegionCode ";
         SetConsoleTextAttribute(Legion, 15);
 
@@ -23,7 +23,7 @@ int main() {
 
         // Color <<<
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(hConsole, 12);
+        SetConsoleTextAttribute(hConsole, arrow());
         std::cout << ">>> ";
         SetConsoleTextAttribute(hConsole, 15);
 
@@ -111,6 +111,20 @@ int main() {
             std::cout << "\n";
             GitClonePull();
             std::cout << "\n";
+
+        } else if (command == "set dark") {
+
+            std::cout << "\n";
+            SetDarkTheme();
+            arrow();
+            legionEnv();
+
+        } else if (command == "set 0") {
+
+            std::cout << "\n";
+            SetDefaultTheme();
+            arrow();
+            legionEnv();
 
         } else if (command.substr(0, 13) == "git commit -m") {
 

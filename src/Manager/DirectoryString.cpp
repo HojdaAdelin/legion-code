@@ -27,7 +27,7 @@ void goToPreviousDirectory() {
     if (std::filesystem::exists(parentPath) && std::filesystem::is_directory(parentPath)) {
         std::filesystem::current_path(parentPath);
         HANDLE prevDir = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(prevDir, 2);
+        SetConsoleTextAttribute(prevDir, legionEnv());
         std::cout << "New directory(previous): ";
         SetConsoleTextAttribute(prevDir, 15);
         std::cout << parentPath << std::endl;
@@ -45,7 +45,7 @@ void goToLastDirectory(std::stack<std::filesystem::path> lastDirStack) {
         std::filesystem::current_path(lastDirectory);
         lastDirStack.pop();
         HANDLE newDir = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleTextAttribute(newDir, 2);
+        SetConsoleTextAttribute(newDir, legionEnv());
         std::cout << "New directory(last): ";
         SetConsoleTextAttribute(newDir, 15);
         std::cout << lastDirectory << std::endl;

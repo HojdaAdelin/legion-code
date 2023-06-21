@@ -44,3 +44,7 @@ void GitCloneCheckout(std::string name);
 void GitCloneBranch(std::string branch);
 void OpenDirectoryToFileExplorer();
 void GitCloneCheckoutFix();
+void SetDefaultTheme();
+void SetDarkTheme();
+int legionEnv();
+int arrow();

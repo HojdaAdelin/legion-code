@@ -104,7 +104,7 @@ git branch
 - [ ] Windows execution commands
 - [x] Git support
 - [ ] Theme selection
-- [ ] Redesign help command
+- [x] Redesign help command
 - [x] Open current directory in explorer
 - [ ] Transfer a file to a new directory
 - [ ] Copy a file and paste to a new directory

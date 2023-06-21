@@ -25,14 +25,14 @@ void displayArchiveContent(const std::string& archivePath) {
         if (iss >> entryType >> entryPath) {
             if (entryType == "file:") {
                 HANDLE colorCode = GetStdHandle(STD_OUTPUT_HANDLE);
-                SetConsoleTextAttribute(colorCode, 2);
+                SetConsoleTextAttribute(colorCode, legionEnv());
                 std::cout << "File: ";
                 SetConsoleTextAttribute(colorCode, 15);
                 std::cout << entryPath << std::endl;
                 
             } else if (entryType == "folder:") {
                 HANDLE colorCode = GetStdHandle(STD_OUTPUT_HANDLE);
-                SetConsoleTextAttribute(colorCode, 14);
+                SetConsoleTextAttribute(colorCode, legionEnv());
                 std::cout << "Folder: ";
                 SetConsoleTextAttribute(colorCode, 15);
                 std::cout << entryPath << std::endl;

@@ -11,7 +11,7 @@ void stackLink(std::string stack) {
 
     storeLink.close();
     HANDLE stackColor = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(stackColor, 2);
+    SetConsoleTextAttribute(stackColor, legionEnv());
     std::cout << stack;
     SetConsoleTextAttribute(stackColor, 15);
     std::cout << " was succesfully stored!\n";
@@ -41,7 +41,7 @@ void viewStackedLink() {
     readLink.close();
     std::cout << "Stored link: ";
     HANDLE storedLink = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(storedLink, 2);
+    SetConsoleTextAttribute(storedLink, legionEnv());
     std::cout << link << std::endl;
     SetConsoleTextAttribute(storedLink, 15);
 

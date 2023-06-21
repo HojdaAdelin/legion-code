@@ -28,7 +28,7 @@ void viewDirectoryContents() {
         if (entry.is_regular_file()) {
 
             HANDLE fileColor = GetStdHandle(STD_OUTPUT_HANDLE);
-            SetConsoleTextAttribute(fileColor, 2);
+            SetConsoleTextAttribute(fileColor, legionEnv());
             std::cout << "File: ";
             SetConsoleTextAttribute(fileColor, 15);
 
@@ -36,7 +36,7 @@ void viewDirectoryContents() {
             std::filesystem::path filePath(entry.path().filename());
             std::uintmax_t fileSize = std::filesystem::file_size(filePath);
             std::cout << " with ";
-            SetConsoleTextAttribute(fileColor, 2);
+            SetConsoleTextAttribute(fileColor, legionEnv());
             std::cout << fileSize;
             SetConsoleTextAttribute(fileColor, 15);
             std::cout << " bytes." << std::endl;
@@ -51,13 +51,13 @@ void viewDirectoryContents() {
             }
 
             HANDLE fileColor = GetStdHandle(STD_OUTPUT_HANDLE);
-            SetConsoleTextAttribute(fileColor, 14);
+            SetConsoleTextAttribute(fileColor, legionEnv());
             std::cout << "Folder: ";
             SetConsoleTextAttribute(fileColor, 15);
 
             std::cout << entry.path().filename();
             std::cout << " with ";
-            SetConsoleTextAttribute(fileColor, 14);
+            SetConsoleTextAttribute(fileColor, legionEnv());
             std::cout << fileCount;
             SetConsoleTextAttribute(fileColor, 15);
             std::cout << " files." << std::endl;

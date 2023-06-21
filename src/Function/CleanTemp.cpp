@@ -46,7 +46,7 @@ void DeleteAllFiles(std::string strPath)
           if(RemoveDirectory(strPathFile.c_str()))
 					{ 
             HANDLE deleteColor = GetStdHandle(STD_OUTPUT_HANDLE);
-            SetConsoleTextAttribute(deleteColor, 14);
+            SetConsoleTextAttribute(deleteColor, legionEnv());
             std::cout << "deleted directory : ";
             SetConsoleTextAttribute(deleteColor, 15);
             std::cout << strPathFile.c_str() << std::endl;
@@ -67,7 +67,7 @@ void DeleteAllFiles(std::string strPath)
         if(DeleteFile(strPathFile.c_str()))
 				{
           HANDLE deleteColor = GetStdHandle(STD_OUTPUT_HANDLE);
-          SetConsoleTextAttribute(deleteColor, 2);
+          SetConsoleTextAttribute(deleteColor, legionEnv());
           std::cout << "deleted file: " << strPathFile.c_str() << std::endl;
           SetConsoleTextAttribute(deleteColor, 15);
         }
