@@ -119,6 +119,13 @@ int main() {
             arrow();
             legionEnv();
 
+        } else if (command == "set ocean") {
+
+            std::cout << "\n";
+            SetOceanTheme();
+            arrow();
+            legionEnv();
+
         } else if (command == "set dark") {
 
             std::cout << "\n";

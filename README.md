@@ -67,6 +67,7 @@ arh -v 'name'     Display the content of an arhive
 dir -o            Open directory in file explorer
 set dark          Dark theme
 set vulcan        Vulcan theme
+set ocean         Ocean theme
 set 0             Default theme
 </pre>
 
@@ -93,6 +94,21 @@ git branch
 
 <p align="center">
 <img src="Images/App.png" height="400" width="750" />
+</p>
+
+Dark theme
+<p align="left">
+<img src="assets/dark.png" height="100" width="200">
+</p>
+
+Vulcan theme
+<p align="left">
+<img src="assets/vulcan.png" height="100" width="200">
+</p>
+
+Ocean theme
+<p align="left">
+<img src="assets/ocean.png" height="100" width="200">
 </p>
 
 # Build

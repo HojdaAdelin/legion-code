@@ -49,3 +49,4 @@ void SetDarkTheme();
 int legionEnv();
 int arrow();
 void SetVulcanTheme();
+void SetOceanTheme();
