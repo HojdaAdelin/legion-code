@@ -112,6 +112,13 @@ int main() {
             GitClonePull();
             std::cout << "\n";
 
+        } else if (command == "set vulcan") {
+
+            std::cout << "\n";
+            SetVulcanTheme();
+            arrow();
+            legionEnv();
+
         } else if (command == "set dark") {
 
             std::cout << "\n";

@@ -65,6 +65,9 @@ delete stack      Delete stored link
 temp              Clean temp files
 arh -v 'name'     Display the content of an arhive
 dir -o            Open directory in file explorer
+set dark          Dark theme
+set vulcan        Vulcan theme
+set 0             Default theme
 </pre>
 
 ## Git Supported Commands

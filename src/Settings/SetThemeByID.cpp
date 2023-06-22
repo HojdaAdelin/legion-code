@@ -30,6 +30,18 @@ void SetDarkTheme() {
 
 }
 
+void SetVulcanTheme() {
+
+    int colorTag = 2;
+
+    std::ofstream writeColorTag("config.cfg");
+
+    writeColorTag << colorTag;
+
+    writeColorTag.close();
+
+}
+
 int legionEnv() {
 
     int colortag;
@@ -47,6 +59,10 @@ int legionEnv() {
     } else if (colortag == 1) {
 
         return 7;
+
+    } else if (colortag == 2) {
+
+        return 6;
 
     } else {
 
@@ -73,6 +89,10 @@ int arrow() {
     } else if (colortag == 1) {
 
         return 8;
+
+    } else if (colortag == 2) {
+
+        return 12;
 
     } else {
 

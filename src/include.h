@@ -48,3 +48,4 @@ void SetDefaultTheme();
 void SetDarkTheme();
 int legionEnv();
 int arrow();
+void SetVulcanTheme();
