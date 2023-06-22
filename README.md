@@ -98,17 +98,17 @@ git branch
 
 Dark theme
 <p align="left">
-<img src="assets/dark.png" height="100" width="200">
+<img src="assets/dark.png" height="100" width="250">
 </p>
 
 Vulcan theme
 <p align="left">
-<img src="assets/vulcan.png" height="100" width="200">
+<img src="assets/vulcan.png" height="100" width="250">
 </p>
 
 Ocean theme
 <p align="left">
-<img src="assets/ocean.png" height="100" width="200">
+<img src="assets/ocean.png" height="100" width="250">
 </p>
 
 # Build
