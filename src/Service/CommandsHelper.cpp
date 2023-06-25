@@ -9,12 +9,12 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.2.9\n";
+        std::cout << "\nVersion: 1.3.1\n";
     } else if (ServiceString == "log") {
         SetConsoleTextAttribute(colorAtribute, legionEnv());
-        std::cout << "\n$LegionCode v1.2.9\n";
+        std::cout << "\n$LegionCode v1.3.1\n";
         SetConsoleTextAttribute(colorAtribute, 15);
-        std::cout << "\n-Git checkout\n-Git branch\n-Directory opener\n-Help redesign\n-Dark theme\n-Vulcan theme\n-Ocean theme\n";
+        std::cout << "\n-Git checkout\n-Git branch\n-Directory opener\n-Help redesign\n-Dark theme\n-Vulcan theme\n-Ocean theme\n-Transfer file\n-Select file\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -61,6 +61,8 @@ void commandHelp() {
     std::cout << "[ set vulcan      Vulcan theme                   ]          ";
     std::cout << "[ set 0           Default theme                ]\n";
     std::cout << "[ set ocean       Ocean theme                    ]          ";
+    std::cout << "[ select 'file'   Stock file                   ]\n";
+    std::cout << "[ transfer        Transfer selected file         ]          ";
     
 
     SetConsoleTextAttribute(colorAtribute, legionEnv());

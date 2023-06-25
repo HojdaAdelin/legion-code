@@ -39,6 +39,19 @@ int main() {
             displayFileSize(filename);
             std::cout << "\n";
 
+        } else if (command.substr(0, 6) == "select") {
+
+            std::string file_path_transfer = command.substr(7);
+            std::cout << "\n";
+            SelectFile(file_path_transfer);
+            std::cout << "\n";
+
+        } else if (command == "transfer") {
+
+            std::cout << "\n";
+            TransferFile();
+            std::cout << "\n";
+
         } else if (command.substr(0, 7) == "info -f") {
             std::cout << "\n";
             std::string filename = command.substr(8);

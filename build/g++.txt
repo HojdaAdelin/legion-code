@@ -15,4 +15,5 @@ src/Function/CleanTemp.cpp,
 src/Manager/Archive.cpp,
 src/Manager/GitSupportWTClone.cpp,
 src/Manager/ExplorerOpener.cpp,
-src/Settings/SetThemeByID.cpp
+src/Settings/SetThemeByID.cpp,
+src/Manager/TransferFile.cpp

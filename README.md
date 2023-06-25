@@ -69,6 +69,8 @@ set dark          Dark theme
 set vulcan        Vulcan theme
 set ocean         Ocean theme
 set 0             Default theme
+select 'file'     Stock file
+transfer          Transfer stocked file to new directory
 </pre>
 
 ## Git Supported Commands
@@ -122,7 +124,7 @@ Ocean theme
 
 - [ ] Windows execution commands
 - [x] Git support
-- [ ] Theme selection
+- [x] Theme selection
 - [x] Redesign help command
 - [x] Open current directory in explorer
 - [ ] Transfer a file to a new directory

@@ -50,3 +50,5 @@ int legionEnv();
 int arrow();
 void SetVulcanTheme();
 void SetOceanTheme();
+void TransferFile();
+void SelectFile(const std::string& fileName);
