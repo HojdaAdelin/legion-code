@@ -9,12 +9,12 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.3.1\n";
+        std::cout << "\nVersion: 1.3.2\n";
     } else if (ServiceString == "log") {
         SetConsoleTextAttribute(colorAtribute, legionEnv());
-        std::cout << "\n$LegionCode v1.3.1\n";
+        std::cout << "\n$LegionCode v1.3.2\n";
         SetConsoleTextAttribute(colorAtribute, 15);
-        std::cout << "\n-Git checkout\n-Git branch\n-Directory opener\n-Help redesign\n-Dark theme\n-Vulcan theme\n-Ocean theme\n-Transfer file\n-Select file\n";
+        std::cout << "\n-Git checkout\n-Git branch\n-Directory opener\n-Help redesign\n-Dark theme\n-Vulcan theme\n-Ocean theme\n-Transfer file\n-Select file\n-Transfer file remove after operation\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 

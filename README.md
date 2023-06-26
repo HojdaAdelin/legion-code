@@ -127,5 +127,5 @@ Ocean theme
 - [x] Theme selection
 - [x] Redesign help command
 - [x] Open current directory in explorer
-- [ ] Transfer a file to a new directory
-- [ ] Copy a file and paste to a new directory
+- [x] Transfer a file to a new directory
+- [x] Copy a file and paste to a new directory

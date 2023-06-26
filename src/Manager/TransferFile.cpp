@@ -33,6 +33,7 @@ void TransferFile() {
         fs::copy_file(selectedFilePath, destinationPath);
 
         std::cout << "File transferred to the current directory." << std::endl;
+        deleteFile(selectedFilePath);
     } else {
         std::cout << "No file selected. Use 'select file' first." << std::endl;
     }
