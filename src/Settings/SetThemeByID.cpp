@@ -6,11 +6,24 @@
 // Arrow are for arrow and folder
 // legionEnv are for Legion name, files & bytes
 
+std::string GetApplicationPath() {
+
+    char buffer[MAX_PATH];
+    GetModuleFileName(NULL, buffer, MAX_PATH);
+    std::string path(buffer);
+    size_t lastSeparator = path.find_last_of("\\/");
+    if (lastSeparator != std::string::npos) {
+        path = path.substr(0, lastSeparator);
+    }
+    return path;
+
+}
+
 void SetDefaultTheme() {
 
     int colorTag = 0;
 
-    std::ofstream writeColorTag("config.cfg");
+    std::ofstream writeColorTag(std::string(GetApplicationPath() + "config.cfg"));
 
     writeColorTag << colorTag;
 
@@ -22,7 +35,7 @@ void SetDarkTheme() {
 
     int colorTag = 1;
 
-    std::ofstream writeColorTag("config.cfg");
+    std::ofstream writeColorTag(std::string(GetApplicationPath() + "config.cfg"));
 
     writeColorTag << colorTag;
 
@@ -34,7 +47,7 @@ void SetVulcanTheme() {
 
     int colorTag = 2;
 
-    std::ofstream writeColorTag("config.cfg");
+    std::ofstream writeColorTag(std::string(GetApplicationPath() + "config.cfg"));
 
     writeColorTag << colorTag;
 
@@ -46,7 +59,7 @@ void SetOceanTheme() {
 
     int colorTag = 3;
 
-    std::ofstream writeColorTag("config.cfg");
+    std::ofstream writeColorTag(std::string(GetApplicationPath() + "config.cfg"));
 
     writeColorTag << colorTag;
 
@@ -58,7 +71,7 @@ int legionEnv() {
 
     int colortag;
 
-    std::ifstream getID("config.cfg");
+    std::ifstream getID(std::string(GetApplicationPath() + "config.cfg"));
 
     getID >> colortag;
 
@@ -92,7 +105,7 @@ int arrow() {
 
     int colortag;
 
-    std::ifstream getID("config.cfg");
+    std::ifstream getID(std::string(GetApplicationPath() + "config.cfg"));
 
     getID >> colortag;
 
