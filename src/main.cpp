@@ -7,9 +7,13 @@
 #include <handleapi.h>
 #include <windows.h>
 #include <stack>
+#include <tchar.h>
+
 std::stack<std::filesystem::path> directoryStack;
 
 int main() {
+
+    SetConsoleTitle(_T("Legion Code"));
 
     std::string command;
     while (true) {
