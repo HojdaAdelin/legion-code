@@ -3,6 +3,7 @@
 #include <string>
 #include <filesystem>
 #include <stack>
+#include <fstream>
 
 // Main header file for Legion Code
 
@@ -52,3 +53,9 @@ void SetVulcanTheme();
 void SetOceanTheme();
 void TransferFile();
 void SelectFile(const std::string& fileName);
+std::string GetTime();
+
+//class std::ofstream;
+extern std::ofstream logFile;
+void LogCommand(const std::string& command);
+void GetLog();

@@ -16,4 +16,5 @@ src/Manager/Archive.cpp,
 src/Manager/GitSupportWTClone.cpp,
 src/Manager/ExplorerOpener.cpp,
 src/Settings/SetThemeByID.cpp,
-src/Manager/TransferFile.cpp
+src/Manager/TransferFile.cpp,
+src/Function/GetTimeForCommands.cpp

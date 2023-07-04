@@ -10,8 +10,22 @@
 #include <tchar.h>
 
 std::stack<std::filesystem::path> directoryStack;
+std::string previousTime;
+std::string timech = GetTime();
+
+HANDLE colorMain = GetStdHandle(STD_OUTPUT_HANDLE);
 
 int main() {
+
+    logFile.open("log.txt", std::ios::app);
+
+    std::string currentTime = GetTime();
+    if (currentTime != previousTime) {
+            
+            timech = currentTime;
+
+            previousTime = currentTime;
+    }
 
     SetConsoleTitle(_T("Legion Code"));
 
@@ -23,7 +37,8 @@ int main() {
         std::cout << "$LegionCode ";
         SetConsoleTextAttribute(Legion, 15);
 
-        std::cout << std::filesystem::current_path() << std::endl;
+        std::cout << std::filesystem::current_path();
+        std::cout << "      " << timech << "\n";
 
         // Color <<<
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -68,6 +83,23 @@ int main() {
             deleteFile(filename);
             std::cout << "\n";
             
+        } else if (command == "lc log") {
+
+            std::cout << "\n";
+            logFile.close();
+            SetConsoleTextAttribute(colorMain, legionEnv());
+            std::cout << "Log commands:" << "\n\n";
+            SetConsoleTextAttribute(colorMain, 15);
+            GetLog();
+
+            SetConsoleTextAttribute(colorMain, 6);
+            std::cout << "\nLog.txt content removed!" << "\n";
+            SetConsoleTextAttribute(colorMain, 15);
+
+            std::ofstream removeLog("log.txt", std::ios::trunc);
+            removeLog.close();
+            std::cout << "\n";
+
         } else if (command.substr(0, 7) == "compres") {
             std::cout << "\n";
             std::string filename = command.substr(8);
@@ -363,6 +395,7 @@ int main() {
             SetConsoleTextAttribute(errorWin, 15);
 
         }
+        LogCommand(command);
     }
 
     return 0;

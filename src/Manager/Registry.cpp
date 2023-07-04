@@ -1,5 +1,7 @@
 #include <windows.h>
 #include <iostream>
+#include <fstream>
+#include <string>
 #include "../include.h"
 
 void viewInstalledApps() {
@@ -28,4 +30,29 @@ void viewInstalledApps() {
         RegCloseKey(hUninstallKey);
         SetConsoleTextAttribute(registreColor, 15);
     }
+}
+
+std::ofstream logFile;
+
+void LogCommand(const std::string& command) {
+    if (logFile.is_open()) {
+        logFile << command << std::endl;
+        logFile.flush();
+    }
+}
+
+void GetLog() {
+
+    std::string line;
+
+    std::ifstream readLog("log.txt");
+
+    while (std::getline(readLog, line))
+    {
+        std::cout << line << "\n";
+    }
+    
+
+    readLog.close();
+
 }
