@@ -33,6 +33,7 @@ int main() {
     while (true) {
 
         HANDLE Legion = GetStdHandle(STD_OUTPUT_HANDLE);
+        
         SetConsoleTextAttribute(Legion, legionEnv());
         std::cout << "$LegionCode ";
         SetConsoleTextAttribute(Legion, 15);
@@ -324,7 +325,7 @@ int main() {
             viewFileContent(file);
             std::cout << "\n";
 
-        } else if (command == "version") {
+        } else if (command == "lc -v") {
 
             std::string Service = command;
             help(Service);
@@ -341,7 +342,7 @@ int main() {
             viewInstalledApps();
             std::cout << "\n";
 
-        } else if (command == "log") {
+        } else if (command == "lc -v -l") {
 
             std::string Service = command;
             help(Service);

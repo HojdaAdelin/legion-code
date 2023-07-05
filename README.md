@@ -40,8 +40,8 @@ help              Display commands
 .bug              Open bugs website
 cd                Directory change
 cls               Clear terminal
-version           Display current version
-log               Change log
+lc -v             Display current version
+lc -v -l          Change log
 del dir           Delete current directory
 size -f 'file'    Display file size from a directory
 info -f 'file'    Display file details from a directory

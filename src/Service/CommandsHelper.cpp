@@ -9,12 +9,12 @@ void help(std::string ServiceString) {
     if (ServiceString == "help") {
         commandHelp();
     } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.3.5\n";
+        std::cout << "\nVersion: 1.3.6\n";
     } else if (ServiceString == "log") {
         SetConsoleTextAttribute(colorAtribute, legionEnv());
-        std::cout << "\n$LegionCode v1.3.5\n";
+        std::cout << "\n$LegionCode v1.3.6\n";
         SetConsoleTextAttribute(colorAtribute, 15);
-        std::cout << "\n-Title set\n-Time command\n";
+        std::cout << "\n-Title set\n-Time command\n-Commands log\n-Based commands redefined\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
@@ -36,8 +36,8 @@ void commandHelp() {
     std::cout << "[ dir -x          Last directory               ]\n";
     std::cout << "[ dir view        View directory                 ]          ";
     std::cout << "[ dir -o          Open directory in explorer   ]\n";
-    std::cout << "[ version         Display version                ]          ";
-    std::cout << "[ log             Change log                   ]\n";
+    std::cout << "[ lc -v           Display version                ]          ";
+    std::cout << "[ lc -v -l        Change log                   ]\n";
     std::cout << "[ cls             Clear terminal                 ]          ";
     std::cout << "[ rand min max    Random number                ]\n";
     std::cout << "[ size -f 'file'  File size                      ]          ";
