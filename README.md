@@ -34,44 +34,44 @@
 
 <pre>
 
-help              Display commands
-.git              Open github
-.source           Open LegionCode source
-.bug              Open bugs website
-cd                Directory change
-cls               Clear terminal
-lc -v             Display current version
-lc -v -l          Change log
-del dir           Delete current directory
-size -f 'file'    Display file size from a directory
-info -f 'file'    Display file details from a directory
-del -f 'file'     Delete file from a directory
--r 'file_name' 'new_name'         Rename file from the directory
-dir view          View directory content
-dir -z            Go to previous directory
-dir -x            Go to last directory
-rand 'min' 'max'  Random number between min and max numbers we enter
-compres 'file'    Create a .zip arhive with the file
-code .            Open VS Code on the current directory
-apps view         Display all apps that are installed on user PC
-open 'app name'   Open a specific app
-close 'app name'  Close a specific app
-view 'file name'  Display the content of a file
-stack 'link'      Store a link
-.web              Open stores link
-view stack        Display stored link
-open 'link'       Open a link
-delete stack      Delete stored link
-temp              Clean temp files
-arh -v 'name'     Display the content of an arhive
-dir -o            Open directory in file explorer
-set dark          Dark theme
-set vulcan        Vulcan theme
-set ocean         Ocean theme
-set 0             Default theme
-select 'file'     Stock file
-transfer          Transfer stocked file to new directory
-lc log            Display called commands
+help                                                                              Display commands
+.git                                                                              Open github
+.source                                                                           Open LegionCode source
+.bug                                                                              Open bugs website
+cd                                                                                Directory change
+cls                                                                               Clear terminal
+lc -v                                                                             Display current version
+lc -v -l                                                                          Change log
+del dir                                                                           Delete current directory
+size -f 'file'                                                                    ]Display file size from a directory
+info -f 'file'                                                                    ]Display file details from a directory
+del -f 'file'                                                                     Delete file from a directory
+-r 'file_name' 'new_name'                                                         Rename file from the directory
+dir view                                                                          View directory content
+dir -z                                                                            Go to previous directory
+dir -x                                                                            Go to last directory
+rand 'min' 'max'                                                                  Random number between min and max numbers
+compres 'file'                                                                    Create a .zip arhive with the file
+code .                                                                            Open VS Code on the current directory
+apps view                                                                         Display all apps that are installed on user PC
+open 'app name'                                                                   Open a specific app
+close 'app name'                                                                  Close a specific app
+view 'file name'                                                                  Display the content of a file
+stack 'link'                                                                      Store a link
+.web                                                                              Open stores link
+view stack                                                                        Display stored link
+open 'link'                                                                       Open a link
+delete stack                                                                      Delete stored link
+temp                                                                              Clean temp files
+arh -v 'name'                                                                     Display the content of an arhive
+dir -o                                                                            Open directory in file explorer
+set dark                                                                          Dark theme
+set vulcan                                                                        Vulcan theme
+set ocean                                                                         Ocean theme
+set 0                                                                             Default theme
+select 'file'                                                                     Stock file
+transfer                                                                          Transfer stocked file to new directory
+lc log                                                                            Display called commands
 </pre>
 
 ## Git Supported Commands
