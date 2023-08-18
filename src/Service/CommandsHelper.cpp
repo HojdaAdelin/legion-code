@@ -8,13 +8,13 @@ void help(std::string ServiceString) {
 
     if (ServiceString == "help") {
         commandHelp();
-    } else if (ServiceString == "version") {
-        std::cout << "\nVersion: 1.3.6\n";
-    } else if (ServiceString == "log") {
+    } else if (ServiceString == "lc -v") {
+        std::cout << "\nVersion: 1.3.7\n";
+    } else if (ServiceString == "lc -v -l") {
         SetConsoleTextAttribute(colorAtribute, legionEnv());
-        std::cout << "\n$LegionCode v1.3.6\n";
+        std::cout << "\n$LegionCode v1.3.7\n";
         SetConsoleTextAttribute(colorAtribute, 15);
-        std::cout << "\n-Title set\n-Time command\n-Commands log\n-Based commands redefined\n";
+        std::cout << "\n-Title set\n-Time command\n-Commands log\n-Based commands redefined\n-Fixed lc -v & lc -v -l\n";
     } else if (ServiceString == ".git" || ".bug" || ".source") {
         WebOpener(ServiceString);
     } 
